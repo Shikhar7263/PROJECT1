@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#262626",
+              "error-container": "#8a1632",
+              "surface": "#0e0e0e",
+              "tertiary-container": "#91eedc",
+              "outline-variant": "#484848",
+              "on-background": "#e5e5e5",
+              "surface-container-highest": "#262626",
+              "on-tertiary-fixed": "#00443b",
+              "on-tertiary": "#006256",
+              "on-primary-container": "#4c2e6d",
+              "on-surface": "#e5e5e5",
+              "primary-dim": "#c8a5ed",
+              "inverse-surface": "#f9f9f9",
+              "on-secondary-fixed": "#662a4f",
+              "on-primary": "#553777",
+              "on-error": "#490013",
+              "primary-fixed": "#d6b2fc",
+              "tertiary-dim": "#83dfce",
+              "tertiary-fixed-dim": "#83dfce",
+              "tertiary": "#9ffcea",
+              "on-secondary-container": "#d98cb7",
+              "surface-container": "#191919",
+              "on-secondary-fixed-variant": "#87456c",
+              "error-dim": "#c8475d",
+              "outline": "#757575",
+              "surface-container-high": "#1f1f1f",
+              "primary-fixed-dim": "#c8a5ed",
+              "surface-dim": "#0e0e0e",
+              "on-primary-fixed": "#361757",
+              "surface-container-low": "#131313",
+              "secondary-fixed": "#ffd8ea",
+              "on-secondary": "#672a50",
+              "inverse-primary": "#705193",
+              "surface-bright": "#2c2c2c",
+              "error": "#fd6f85",
+              "secondary-container": "#470f34",
+              "tertiary-fixed": "#91eedc",
+              "on-tertiary-fixed-variant": "#006358",
+              "on-surface-variant": "#ababab",
+              "primary": "#e1c3ff",
+              "on-primary-fixed-variant": "#553777",
+              "secondary-dim": "#f0a0cc",
+              "background": "#000000",
+              "inverse-on-surface": "#555555",
+              "secondary": "#ffaeda",
+              "on-tertiary-container": "#00594e",
+              "surface-container-lowest": "#000000",
+              "on-error-container": "#ff97a3",
+              "secondary-fixed-dim": "#ffc4e2",
+              "primary-container": "#d6b2fc",
+              "surface-tint": "#e1c3ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { background-color: #000000; color: #e5e5e5; font-family: 'Manrope', sans-serif; }
+      .glass-effect { backdrop-filter: blur(40px); }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      .tonal-shift-no-border { border: none !important; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background min-h-screen selection:bg-primary/30">
+<!-- TopNavBar Shell -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-8 py-3 rounded-full mt-4 mx-auto max-w-7xl w-[95%] bg-neutral-900/60 backdrop-blur-2xl shadow-[0_16px_48px_rgba(225,195,255,0.08)]">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-purple-200">Luminous</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-purple-200 font-bold border-b-2 border-purple-200 pb-1 font-manrope tracking-tight text-sm" href="#">Curated</a>
+<a class="text-neutral-400 hover:text-neutral-200 transition-colors font-manrope tracking-tight text-sm font-medium" href="#">Archive</a>
+<a class="text-neutral-400 hover:text-neutral-200 transition-colors font-manrope tracking-tight text-sm font-medium" href="#">Journal</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg">search</span>
+<input class="bg-surface-container-high/40 border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-primary/50 w-64 placeholder:text-neutral-500" placeholder="Search creators..." type="text"/>
+</div>
+<button class="p-2 text-purple-200 hover:scale-[1.02] transition-transform duration-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img alt="User Profile" data-alt="close-up portrait of a stylish woman with editorial lighting and soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE66WKIHr_JCNjVbm0n35Y5rJDZJP-qr0Mz6kzqmxw39WAK2enUV7cHsme06BBIoPeuZlvEE4NWpbvPDYsRc7o0q3Rzsc8WO3RrXVCL-vyc1-LtS85Q9y2CAP3k_cgrzKJoYkJC9GJrpVI8g5RjfKAC5PfYtdY7gJ9HzjKci09AhA4Re1Ey4EHu8s8_FXQz1PeXfenmXjb9FjTO5nAt1ycbtPT4_7CIsxXkTw3POo9JdtIBcv54KyO0DB-5J0DL5f7sL4DwVej4-s"/>
+</div>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section with Background Glows -->
+<section class="relative pt-24 pb-16 px-6 overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="absolute top-20 right-0 w-64 h-64 bg-secondary/5 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="text-secondary font-label tracking-[0.2em] text-xs font-bold uppercase mb-4 block">The Collective</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter text-on-background leading-none">
+                            Explore <br/> <span class="text-primary-dim">Shops.</span>
+</h1>
+</div>
+<p class="text-on-surface-variant font-body text-lg max-w-sm mb-2 opacity-80">
+                        Discover a curated ecosystem of independent designers and digital artisans shaping the new aesthetic.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Category Pills -->
+<section class="max-w-7xl mx-auto px-6 mb-16">
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-4">
+<button class="bg-primary text-on-primary-fixed px-8 py-3 rounded-full font-label text-sm font-bold tracking-wide whitespace-nowrap transition-transform active:scale-95">All</button>
+<button class="bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface-variant px-8 py-3 rounded-full font-label text-sm font-bold tracking-wide whitespace-nowrap transition-colors">Fashion</button>
+<button class="bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface-variant px-8 py-3 rounded-full font-label text-sm font-bold tracking-wide whitespace-nowrap transition-colors">Electronics</button>
+<button class="bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface-variant px-8 py-3 rounded-full font-label text-sm font-bold tracking-wide whitespace-nowrap transition-colors">Art</button>
+<button class="bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface-variant px-8 py-3 rounded-full font-label text-sm font-bold tracking-wide whitespace-nowrap transition-colors">Jewelry</button>
+<button class="bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface-variant px-8 py-3 rounded-full font-label text-sm font-bold tracking-wide whitespace-nowrap transition-colors">Home Decor</button>
+<button class="bg-surface-container-high/60 hover:bg-surface-container-high text-on-surface-variant px-8 py-3 rounded-full font-label text-sm font-bold tracking-wide whitespace-nowrap transition-colors">Prints</button>
+</div>
+</section>
+<!-- Vendor Grid -->
+<section class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-32">
+<!-- Vendor Card 1 -->
+<div class="group relative bg-surface-container rounded-xl overflow-hidden shadow-[0_16px_48px_rgba(225,195,255,0.04)] hover:shadow-[0_16px_64px_rgba(225,195,255,0.08)] transition-all duration-500">
+<div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<div class="h-64 overflow-hidden relative">
+<img alt="Studio Arc Preview" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="minimalist fashion editorial featuring avant-garde clothing with sharp shadows and clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8RsNlKlVmv2n8AsclHEhjrOaXg6Zh2z_AlpBAlLXXf3NL13hjvRpa0F-zsVwL-cQ7r8FrSUpwz_5mHZ3wGMGQk3dXDIaVrIOfYpgPQLBbQCkxSIOuAMf1RKaMcRO7wzMQP6ggptkAiOkkdWXrOzkGGEvixcCnWd8oGo-Qu7ZcAg2kmNCq9XCYZQ50Vxax5lllvC4MJ2d79V7A7DesfBdA2w5CdnF3xVTugGKuNjj-OVu-jfSwwJpjeEom9oNcQmJVGCpgRCJGsrE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface tracking-tight mb-1">Studio Arc</h3>
+<span class="text-on-surface-variant text-sm font-medium">Curated Avant-Garde Apparel</span>
+</div>
+<span class="bg-tertiary/10 text-tertiary px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase shadow-[0_0_10px_rgba(159,252,234,0.15)]">New Arrival</span>
+</div>
+<button class="w-full bg-surface-bright/10 hover:bg-primary hover:text-on-primary-fixed backdrop-blur-md text-on-surface font-bold py-4 rounded-full transition-all duration-300 group-hover:scale-[1.02] border border-outline-variant/20">
+                        Visit Shop
+                    </button>
+</div>
+</div>
+<!-- Vendor Card 2 -->
+<div class="group relative bg-surface-container rounded-xl overflow-hidden shadow-[0_16px_48px_rgba(225,195,255,0.04)] hover:shadow-[0_16px_64px_rgba(225,195,255,0.08)] transition-all duration-500">
+<div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<div class="h-64 overflow-hidden relative">
+<img alt="Ceramics Co. Preview" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="close-up of handcrafted matte black ceramic vases on a dark wooden table with soft atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzCltcXNlqofrB_q9YppcIfy06DwcZY7lCzO8LA0XVdTJKB4oMf6ZOmQmYmgufMEZP0MS364KmJvLBvtWLaZ1KwvDG00lVUyKuUEEC6_Vnco0BXQLCdqZK7BohFMquQ9Iph_fWO7CkNI6hvCgzsnYhdoF4PS1-_lN4YFzBh9ZahgAhFJi4eZ0VEV72b8Ujkg5bQgDX92caN7RuMaLv9CFLkwEiSUTqrVZV2RyqlXK-tf2ORcLH-m51ZXcXF4PGy2u84EHlamCVZAA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface tracking-tight mb-1">Ceramics Co.</h3>
+<span class="text-on-surface-variant text-sm font-medium">Wabi-Sabi Home Artifacts</span>
+</div>
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase shadow-[0_0_10px_rgba(255,174,218,0.15)]">Bestseller</span>
+</div>
+<button class="w-full bg-surface-bright/10 hover:bg-primary hover:text-on-primary-fixed backdrop-blur-md text-on-surface font-bold py-4 rounded-full transition-all duration-300 group-hover:scale-[1.02] border border-outline-variant/20">
+                        Visit Shop
+                    </button>
+</div>
+</div>
+<!-- Vendor Card 3 -->
+<div class="group relative bg-surface-container rounded-xl overflow-hidden shadow-[0_16px_48px_rgba(225,195,255,0.04)] hover:shadow-[0_16px_64px_rgba(225,195,255,0.08)] transition-all duration-500">
+<div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<div class="h-64 overflow-hidden relative">
+<img alt="Tech Noir Preview" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="futuristic sleek mechanical keyboard and audio equipment on a desk with purple and cyan neon highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0A4044zGXYL8EV8gFo8Qu8DD5VlHuBUaygVSTO55AqAvsXtHRp3bSbvgjJDCRADKP1f2V8moWB71bRgFXz4Jv4OXiSD6SceaOtxkQi8yeQX_BAqmnRv782j73QpS6VR1i0YchIjzscvBW4buJKqNWSHVoGdZumjVDYoSLXc1p9SIOoUjkRjnCCZLmXtaB5Rjhvc570c0fuFbXjm6EKlo_Yer9MP-7DGcWb0-VKPxw2RUmLFFL-u9SybRluPfa3tk-33fuuBE5XIo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface tracking-tight mb-1">Tech Noir</h3>
+<span class="text-on-surface-variant text-sm font-medium">Bespoke Mechanical Tools</span>
+</div>
+</div>
+<button class="w-full bg-surface-bright/10 hover:bg-primary hover:text-on-primary-fixed backdrop-blur-md text-on-surface font-bold py-4 rounded-full transition-all duration-300 group-hover:scale-[1.02] border border-outline-variant/20">
+                        Visit Shop
+                    </button>
+</div>
+</div>
+<!-- Vendor Card 4 -->
+<div class="group relative bg-surface-container rounded-xl overflow-hidden shadow-[0_16px_48px_rgba(225,195,255,0.04)] hover:shadow-[0_16px_64px_rgba(225,195,255,0.08)] transition-all duration-500">
+<div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<div class="h-64 overflow-hidden relative">
+<img alt="Lumiere Jewelry Preview" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="close-up of delicate gold jewelry items arranged on a dark velvet surface with crystalline light reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbQZiZ0-s4vcDfUME_gUXdBK_-id-MIQUrOcqK_UuiAqna7V5cjkD_p5m8IT9quVEdcR8A2A_zGEgpCOLhKSEDW4TBB9l8bZMSNtpHphZ68ApV1qsYFgKn8BvE6--wJj6dhFCn4WfwSfRHWnUTKyMuOrtqo-M_22ZMlLzaDbCvHVzN7z8jvx6caqJB3Dwdtb2DQiJrPTQiA4VjnJu7uNJ28Eygxx2oZor0Ee2VQMbSlXK0lQfW5jc6TelIYjowDOSrHDJQC3HA07w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface tracking-tight mb-1">Lumiere Jewelry</h3>
+<span class="text-on-surface-variant text-sm font-medium">Organic 18k Gold Forms</span>
+</div>
+</div>
+<button class="w-full bg-surface-bright/10 hover:bg-primary hover:text-on-primary-fixed backdrop-blur-md text-on-surface font-bold py-4 rounded-full transition-all duration-300 group-hover:scale-[1.02] border border-outline-variant/20">
+                        Visit Shop
+                    </button>
+</div>
+</div>
+<!-- Vendor Card 5 -->
+<div class="group relative bg-surface-container rounded-xl overflow-hidden shadow-[0_16px_48px_rgba(225,195,255,0.04)] hover:shadow-[0_16px_64px_rgba(225,195,255,0.08)] transition-all duration-500">
+<div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<div class="h-64 overflow-hidden relative">
+<img alt="Abstract Labs Preview" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="vibrant abstract digital art piece with flowing liquid shapes and high-contrast neon purple and blue colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeZEgeEw3GBFq25yCXLQrKYmkQzDnEFKm0KuPjNG4XtT5q7m6lwpMYC8ktlVFNaYd6Qm9KID0b_6lzTgYnYqvUPgDOl5SfjqgXjCGQ7TV1xig7nKJZ_PiqDBJH1yVTqzpzal85hAW3KDu9ccDfg41mZNBZqDgrhaOEw5KMAf-izSA0unjyoQ-TW0cD8_sDSmb7S2i8FoqQhknYG4EZ77YW6VKF8H7JLNVYTvNaH05PRCpo6Rld5qn4nydsh-ByOSnx-MiHg_VQGbc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface tracking-tight mb-1">Abstract Labs</h3>
+<span class="text-on-surface-variant text-sm font-medium">Generative Motion Art</span>
+</div>
+</div>
+<button class="w-full bg-surface-bright/10 hover:bg-primary hover:text-on-primary-fixed backdrop-blur-md text-on-surface font-bold py-4 rounded-full transition-all duration-300 group-hover:scale-[1.02] border border-outline-variant/20">
+                        Visit Shop
+                    </button>
+</div>
+</div>
+<!-- Vendor Card 6 -->
+<div class="group relative bg-surface-container rounded-xl overflow-hidden shadow-[0_16px_48px_rgba(225,195,255,0.04)] hover:shadow-[0_16px_64px_rgba(225,195,255,0.08)] transition-all duration-500">
+<div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+<div class="h-64 overflow-hidden relative">
+<img alt="Obsidian Brew Preview" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="professional barista pouring latte art in a sleek modern black cafe with warm spotlight and steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwW2jf43v1KdL9DEQJ8RX8gh9OCihnX5K1Tlq27gkhtzEtKMT2MMSvbkSastL3HaH87Nq0JXTKZntYSjMecfdejhQJ9jXwvTofONwmmWlUzvDPqhkdy-dn6Sm1fyPlOA-GVaPqvnQQxgPtEoi_obbREgyeG1gxLzP1HBnJcuQ-qxrcbD623AIDu8h-fufx9jWpETXV69D1hhj4_NTDdnclXjjJYnZZKJnmA2H97p2P3UvXP8x5KlpjVuil2yvBVt5Ssbl9PbWfstU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface tracking-tight mb-1">Obsidian Brew</h3>
+<span class="text-on-surface-variant text-sm font-medium">Specialty Coffee Artifacts</span>
+</div>
+</div>
+<button class="w-full bg-surface-bright/10 hover:bg-primary hover:text-on-primary-fixed backdrop-blur-md text-on-surface font-bold py-4 rounded-full transition-all duration-300 group-hover:scale-[1.02] border border-outline-variant/20">
+                        Visit Shop
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 z-50 flex justify-around items-center p-2 rounded-full mb-6 mx-auto w-[90%] max-w-md bg-neutral-900/80 backdrop-blur-3xl shadow-[0_8px_32px_rgba(225,195,255,0.1)]">
+<a class="flex flex-col items-center justify-center bg-purple-500/20 text-purple-200 rounded-full px-5 py-2" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 hover:bg-neutral-800/50 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 hover:bg-neutral-800/50 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 hover:bg-neutral-800/50 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+<!-- Footer Shell -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center gap-6 full-width py-12 px-8 mt-20 bg-neutral-950 border-t border-neutral-800/30">
+<div>
+<span class="text-lg font-black text-purple-200">Luminous</span>
+<p class="font-manrope text-xs tracking-wide text-neutral-500 mt-2">© 2024 The Luminous Curator</p>
+</div>
+<div class="flex gap-8">
+<a class="font-manrope text-xs tracking-wide text-neutral-500 hover:text-purple-200 transition-colors" href="#">Terms</a>
+<a class="font-manrope text-xs tracking-wide text-neutral-500 hover:text-purple-200 transition-colors" href="#">Privacy</a>
+<a class="font-manrope text-xs tracking-wide text-neutral-500 hover:text-purple-200 transition-colors" href="#">Shipping</a>
+<a class="font-manrope text-xs tracking-wide text-neutral-500 hover:text-purple-200 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container border border-outline-variant/20 text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container border border-outline-variant/20 text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">language</span>
+</button>
+</div>
+</footer>
+</body></html>

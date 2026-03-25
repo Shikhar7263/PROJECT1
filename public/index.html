@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luminous | Sell Anywhere, Everywhere</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#131313",
+                        "primary-container": "#98ffd9",
+                        "on-primary-fixed": "#004533",
+                        "on-error": "#490006",
+                        "primary-fixed-dim": "#7be2bd",
+                        "on-background": "#e5e5e5",
+                        "on-secondary": "#3d3f4f",
+                        "tertiary-fixed": "#fdf8cb",
+                        "surface-container": "#191919",
+                        "surface": "#0e0e0e",
+                        "tertiary": "#fffadb",
+                        "outline-variant": "#484848",
+                        "on-tertiary": "#63603e",
+                        "on-primary-container": "#00634b",
+                        "surface-tint": "#e7fff3",
+                        "surface-dim": "#0e0e0e",
+                        "on-tertiary-fixed": "#4f4c2c",
+                        "error-dim": "#c94947",
+                        "inverse-surface": "#f9f9f9",
+                        "primary-dim": "#7be2bd",
+                        "secondary": "#c5c5d8",
+                        "on-secondary-fixed": "#404251",
+                        "on-primary-fixed-variant": "#00644c",
+                        "surface-bright": "#2c2c2c",
+                        "surface-container-highest": "#262626",
+                        "background": "#0e0e0e",
+                        "surface-container-lowest": "#000000",
+                        "primary-fixed": "#89f0cb",
+                        "on-tertiary-container": "#5a5836",
+                        "error": "#ff716c",
+                        "secondary-container": "#232533",
+                        "on-surface": "#e5e5e5",
+                        "inverse-on-surface": "#555555",
+                        "on-tertiary-fixed-variant": "#6c6946",
+                        "on-secondary-container": "#a2a2b5",
+                        "primary": "#e7fff3",
+                        "inverse-primary": "#006c52",
+                        "secondary-dim": "#b7b7ca",
+                        "surface-container-high": "#1f1f1f",
+                        "tertiary-dim": "#efeabe",
+                        "on-surface-variant": "#ababab",
+                        "surface-variant": "#262626",
+                        "tertiary-container": "#f1edc0",
+                        "on-primary": "#006c52",
+                        "secondary-fixed": "#e6e6fa",
+                        "secondary-fixed-dim": "#d8d8ec",
+                        "outline": "#757575",
+                        "tertiary-fixed-dim": "#efeabe",
+                        "on-error-container": "#ff9993",
+                        "on-secondary-fixed-variant": "#5c5e6e",
+                        "error-container": "#8a1a1e"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e5e5e5;
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .hero-glow {
+            background: radial-gradient(circle, rgba(231, 255, 243, 0.15) 0%, rgba(255, 250, 219, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/30">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#e7fff3] tracking-tighter font-headline">Luminous</div>
+<div class="hidden md:flex items-center gap-8 font-['Manrope'] tracking-tight font-semibold">
+<a class="text-[#ababab] hover:text-[#e5e5e5] transition-colors" href="#">Marketplace</a>
+<a class="text-[#ababab] hover:text-[#e5e5e5] transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold transition-transform scale-95 active:scale-90 font-headline">Become a Vendor</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="relative pt-32 pb-20 overflow-hidden">
+<!-- Atmospheric Background Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[800px] hero-glow pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter text-on-surface mb-8">
+                Sell <span class="text-primary italic">Anywhere</span>,<br/>Everywhere.
+            </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium">
+                The ethereal curator for modern commerce. Luminous transforms your digital storefront into a premium gallery experience.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto px-10 py-5 rounded-full font-bold text-lg bg-gradient-to-r from-primary to-primary-dim text-on-primary shadow-[0_0_40px_rgba(152,255,217,0.2)] hover:shadow-[0_0_60px_rgba(152,255,217,0.3)] transition-all duration-300 font-headline">
+                    Start Selling
+                </button>
+<button class="w-full sm:w-auto px-10 py-5 rounded-full font-bold text-lg border border-outline-variant hover:bg-surface-variant/20 transition-all font-headline">
+                    Explore Shops
+                </button>
+</div>
+<!-- Hero Image / Visual Anchor -->
+<div class="mt-24 relative max-w-5xl mx-auto group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/20 via-tertiary/10 to-secondary/20 rounded-xl blur-2xl opacity-50"></div>
+<div class="relative bg-surface rounded-xl overflow-hidden aspect-[16/9]">
+<img alt="Luminous Dashboard" class="w-full h-full object-cover" data-alt="Modern dark mode software interface with glassmorphic cards and soft neon mint highlights showing sales analytics and product galleries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTh9QmcUBb5zFK8bqIo7g9ahpesLurZ1U4DMLJl1mVlFjbS9uKAFWSQWllRYZwG6c3DH3l2JrRVKtjngDR8dCswXWHZTMX-8rQ2eLK0a6XuyGdxiBCasra15qHu4aSkDMmXe8wNPlTjuIi8S3G8R2-c3MSX7YjF9CcpmIIIAo7HUgPuG6oxsxbL_jJCSaq1fJOf9Ef06GQhlELQnwEhfQF7or2PWaawjwRB1BgU2GNfjgbKRv8MyI43_cdCi-d1fFXha3DqcggxiA"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Features Section (Bento Grid) -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-panel p-10 rounded-xl flex flex-col items-start gap-6 border border-outline-variant/10 group hover:bg-surface-variant/30 transition-all duration-500">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="brush">brush</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-3">Beautiful Canvas</h3>
+<p class="text-on-surface-variant leading-relaxed">Design a storefront that breathes. Custom editorial layouts that treat your products like fine art.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel p-10 rounded-xl flex flex-col items-start gap-6 border border-outline-variant/10 group hover:bg-surface-variant/30 transition-all duration-500">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="payments">payments</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-3">Seamless Payments</h3>
+<p class="text-on-surface-variant leading-relaxed">Integrated global checkout with support for crypto, cards, and digital wallets. frictionless from day one.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel p-10 rounded-xl flex flex-col items-start gap-6 border border-outline-variant/10 group hover:bg-surface-variant/30 transition-all duration-500">
+<div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-3">QR Integrated</h3>
+<p class="text-on-surface-variant leading-relaxed">Bridging physical and digital. Generate dynamic QR codes for physical pop-ups and magazines.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner Section -->
+<section class="py-20 max-w-7xl mx-auto px-6">
+<div class="relative bg-surface rounded-xl p-12 md:p-24 overflow-hidden text-center border border-outline-variant/10">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl md:text-6xl font-bold mb-8 tracking-tight">Join 1000+ Vendors today</h2>
+<p class="text-on-surface-variant text-lg max-w-xl mx-auto mb-12">
+                    Start your journey with Luminous and scale your commerce to the next level with our premium curation tools.
+                </p>
+<button class="bg-primary text-on-primary px-12 py-5 rounded-full font-extrabold text-xl font-headline transition-transform hover:scale-105 active:scale-95 shadow-xl">
+                    Get Started Now
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-[#0e0e0e]">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-xl font-bold text-[#e5e5e5] font-headline">Luminous</div>
+<div class="font-['Inter'] text-sm text-[#ababab]">© 2024 Luminous Digital. All rights reserved.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#e7fff3] underline font-['Inter'] text-sm hover:text-[#e7fff3] transition-colors" href="#">Join 1000+ Vendors today</a>
+<a class="text-[#ababab] font-['Inter'] text-sm hover:text-[#e7fff3] transition-colors" href="#">Twitter</a>
+<a class="text-[#ababab] font-['Inter'] text-sm hover:text-[#e7fff3] transition-colors" href="#">Instagram</a>
+<a class="text-[#ababab] font-['Inter'] text-sm hover:text-[#e7fff3] transition-colors" href="#">Discord</a>
+<a class="text-[#ababab] font-['Inter'] text-sm hover:text-[#e7fff3] transition-colors" href="#">Terms</a>
+<a class="text-[#ababab] font-['Inter'] text-sm hover:text-[#e7fff3] transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

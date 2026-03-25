@@ -1,0 +1,138 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  VENDOR
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  EXPIRED
+  CANCELLED
+  PENDING
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  password      String
+  role          Role      @default(VENDOR)
+  phone         String?
+  emailVerified DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  shop         Shop?
+  payments     Payment[]
+  subscription Subscription?
+}
+
+model Shop {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?  @db.Text
+  logo        String?
+  banner      String?
+  address     String?
+  city        String?
+  state       String?
+  pincode     String?
+  latitude    Float?
+  longitude   Float?
+  whatsapp    String?
+  email       String?
+  openTime    String?
+  closeTime   String?
+  isActive    Boolean  @default(false)
+  qrCodeUrl   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  userId     String     @unique
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  products   Product[]
+  categories Category[]
+}
+
+model Category {
+  id       String    @id @default(cuid())
+  name     String
+  slug     String
+  shopId   String
+  shop     Shop      @relation(fields: [shopId], references: [id], onDelete: Cascade)
+  products Product[]
+
+  @@unique([shopId, slug])
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  name        String
+  description String?  @db.Text
+  price       Float
+  salePrice   Float?
+  images      String[]
+  inStock     Boolean  @default(true)
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  shopId     String
+  shop       Shop      @relation(fields: [shopId], references: [id], onDelete: Cascade)
+  categoryId String?
+  category   Category? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+}
+
+model Subscription {
+  id            String             @id @default(cuid())
+  status        SubscriptionStatus @default(PENDING)
+  planId        String
+  plan          Plan               @relation(fields: [planId], references: [id])
+  startDate     DateTime?
+  endDate       DateTime?
+  razorpaySubId String?            @unique
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+
+  userId   String    @unique
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  payments Payment[]
+}
+
+model Plan {
+  id             String         @id @default(cuid())
+  name           String
+  price          Float
+  duration       Int
+  features       String[]
+  isActive       Boolean        @default(true)
+  razorpayPlanId String?        @unique
+  createdAt      DateTime       @default(now())
+
+  subscriptions Subscription[]
+}
+
+model Payment {
+  id                String   @id @default(cuid())
+  amount            Float
+  currency          String   @default("INR")
+  status            String
+  razorpayPaymentId String?  @unique
+  razorpayOrderId   String?
+  razorpaySignature String?
+  createdAt         DateTime @default(now())
+
+  userId         String
+  user           User          @relation(fields: [userId], references: [id])
+  subscriptionId String?
+  subscription   Subscription? @relation(fields: [subscriptionId], references: [id])
+}
